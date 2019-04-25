@@ -1,6 +1,6 @@
 
 @NonCPS
-def abortPreviousBuild() {
+def abortPreviousJobs() {
   def hi = Hudson.instance
   def pname = env.JOB_NAME.split('/')[0]
 
@@ -22,5 +22,5 @@ def abortPreviousBuild() {
 }
 
 def call() {
-    abortPreviousBuild()
+    abortPreviousJobs()
 }
